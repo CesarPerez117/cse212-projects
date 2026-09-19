@@ -11,10 +11,10 @@ public class CustomerService {
         // Test Cases
 
         // Test 1
-        // Scenario: 
-        // Expected Result: 
+        // Scenario: 3 customers arrives, in their request two orders are ready and dropped.
+        // Expected Result: Add 3 people on the queue and then dequeue 2 right away.
         Console.WriteLine("Test 1");
-
+       
         // Defect(s) Found: 
 
         Console.WriteLine("=================");

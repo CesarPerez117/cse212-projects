@@ -40,16 +40,20 @@ public class TakingTurnsQueue
         else
         {
             Person person = _people.Dequeue();
+
             if (person.Turns > 1)
             {
                 person.Turns -= 1;
                 _people.Enqueue(person);
             }
-
+            else if (person.IsInfinite == true)
+            {
+                _people.Enqueue(person);
+            }
             return person;
         }
     }
-
+    
     public override string ToString()
     {
         return _people.ToString();
